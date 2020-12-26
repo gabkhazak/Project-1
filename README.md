@@ -29,8 +29,8 @@ What is the advantage of a jump box?_
 The jump box controls entry to other virtual machines by authorizing connections from set IP addresses and being redirected to the other machines. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __logs___ and system _traffic____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- _TODO: What does Filebeat watch for?_Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
+- _TODO: What does Metricbeat record?_Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -50,7 +50,7 @@ Only the _Jbox____ machine can accept connections from the Internet. Access to t
 - _TODO: Add whitelisted IP addresses_ My Public IP Address 
 
 Machines within the network can only be accessed by _Jbox IP 10.0.0.4____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- _TODO: Which machine did you allow to access your ELK VM? Jbox Virtual Machine  What was its IP address?_10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
