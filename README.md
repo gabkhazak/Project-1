@@ -37,7 +37,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jbox     | Gateway  | 10.0.0.1   | Linux            |
+| Jbox     | Gateway  | 10.0.0.1   | Linux Ubuntu 18.04.5            |
 | Web-1    | Webserver| 10.0.0.5   | Linux            |
 | Web-2    | Webserver| 10.0.0.6   | Linux            |
 | ELK      |Monitoring| 10.1.0.4   | Linux            |
