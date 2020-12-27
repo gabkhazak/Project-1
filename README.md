@@ -50,7 +50,7 @@ Only the _Jbox____ machine can accept connections from the Internet. Access to t
 - _TODO: Add whitelisted IP addresses_ 173.33.194.163 
 
 Machines within the network can only be accessed by _Jbox IP 10.0.0.4____.
-- _TODO: Which machine did you allow to access your ELK VM? Jbox Virtual Machine  What was its IP address?_10.0.0.4
+- Which machine did you allow to access your ELK VM? Jbox Virtual Machine  What was its IP address?_10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -64,10 +64,10 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_ it makes sure the scripts will run identically on every virtual machine and the automated configurations will do the same thing each time they are ran, reducing variability among the configuration process. 
+- What is the main advantage of automating configuration with Ansible?_ it makes sure the scripts will run identically on every virtual machine and the automated configurations will do the same thing each time they are ran, reducing variability among the configuration process. 
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - Install docker.io
 - Install python3-pip
 - Install docker module 
@@ -80,14 +80,15 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_ Web-1 Private IP Address 10.0.0.5 and Web-2 Private IP Address 10.0.0.6 
+- List the IP addresses of the machines you are monitoring
+- Web-1 Private IP Address 10.0.0.5 and Web-2 Private IP Address 10.0.0.6 
 
 We have installed the following Beats on these machines:
 - Filebeat (filebeat-7.4.0-amd64.deb) 
 - Metricbeat (metricbeat-7.4.0-amd64.deb)
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat collects log files, which will track the Apache server and MySQL database logs that are created by DVWA. The data visualization will be observed in Kibana. 
 - Metricbeat assists in montitoring servers and services that are hosted by gathering metrics from operating systems and several services. The Data visualization monitoring and metric analyzation will then be observed through kibana. 
 ### Using the Playbook
@@ -98,8 +99,8 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include...the elk server 10.1.0.4 under the webservers_
 - Run the playbook, and navigate to http://20.185.38.234:5601/app/kibana go to Step 5:Module Status and click Check Data __ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- Which file is the playbook? filebeat-playbook.yml  Where do you copy it?_ /etc/ansible/roles 
+Answer the following questions to fill in the blanks:
+- Which file is the playbook? filebeat-playbook.yml  Where do you copy it? /etc/ansible/roles 
 - Which file do you update to make Ansible run the playbook on a specific machine? the hosts file How do I specify which machine to install the ELK server on versus which to install Filebeat on?_add the private IP of the elk virtual machine under webservers 
 - Which URL do you navigate to in order to check that the ELK server is running? http://20.185.38.234:5601/app/kibana
 
