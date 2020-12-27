@@ -22,15 +22,15 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _available and reliable____, in addition to restricting _access___ to the network.
-- _TODO: What aspect of security do load balancers protect? Load Balancers assist in distributing traffic steadily between the servers and reduces  Denial-of-service (DoS) attacks 
+Load balancing ensures that the application will be highly available and reliable, in addition to restricting _access___ to the network.
+- What aspect of security do load balancers protect? Load Balancers assist in distributing traffic steadily between the servers and reduces  Denial-of-service (DoS) attacks 
 
-What is the advantage of a jump box?_
+What is the advantage of a jump box?
 The jump box controls entry to other virtual machines by authorizing connections from set IP addresses and being redirected to the other machines. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __logs___ and system _files____.
-- _TODO: What does Filebeat watch for?_Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
-- _TODO: What does Metricbeat record?_Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
+-  What does Filebeat watch for?_Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
+-  TODO: What does Metricbeat record?_Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
