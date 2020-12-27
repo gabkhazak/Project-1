@@ -37,17 +37,17 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jbox     | Gateway  | 10.0.0.1   | Linux Ubuntu 18.04.5            |
-| Web-1    | Webserver| 10.0.0.5   | Linux            |
-| Web-2    | Webserver| 10.0.0.6   | Linux            |
-| ELK      |Monitoring| 10.1.0.4   | Linux            |
+| Jbox     | Gateway  | 10.0.0.1   | Linux Ubuntu 18.04.5           |
+| Web-1    | Webserver| 10.0.0.5   | Linux Ubuntu 18.04.5           |
+| Web-2    | Webserver| 10.0.0.6   | Linux Ubuntu 18.04.5           |
+| ELK      |Monitoring| 10.1.0.4   | Linux Ubuntu 18.04.5           |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _Jbox____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_ My Public IP Address 
+- _TODO: Add whitelisted IP addresses_ 173.33.194.163 
 
 Machines within the network can only be accessed by _Jbox IP 10.0.0.4____.
 - _TODO: Which machine did you allow to access your ELK VM? Jbox Virtual Machine  What was its IP address?_10.0.0.4
@@ -59,7 +59,7 @@ A summary of the access policies in place can be found in the table below.
 | Jbox     | Yes                 | 173.33.194.163       |
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
-| ELK      | No                  | My Public IP Address |
+| ELK      | No                  | 173.33.194.163       |
 
 ### Elk Configuration
 
@@ -83,11 +83,13 @@ This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_ Web-1 Private IP Address 10.0.0.5 and Web-2 Private IP Address 10.0.0.6 
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_ Filebeat and Metricbeat 
+- Filebeat (filebeat-7.4.0-amd64.deb) 
+- Metricbeat (metricbeat-7.4.0-amd64.deb)
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-
+- Filebeat collects log files, which will track the Apache server and MySQL database logs that are created by DVWA. The data visualization will be observed in Kibana. 
+- Metricbeat assists in montitoring servers and services that are hosted by gathering metrics from operating systems and several services. The Data visualization monitoring and metric analyzation will then be observed through kibana. 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
