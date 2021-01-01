@@ -31,7 +31,7 @@ Load balancing ensures that the application will be highly available and reliabl
 What is the advantage of a jump box?
 The jump box controls entry to other virtual machines by authorizing connections from set IP addresses and being redirected to the other machines. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system files.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network logs and system files.
 -  What does Filebeat watch for? Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
 -  What does Metricbeat record? Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
 
