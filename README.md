@@ -25,15 +25,15 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly available and reliable, in addition to restricting _access___ to the network.
+Load balancing ensures that the application will be highly available and reliable, in addition to restricting access to the network.
 - What aspect of security do load balancers protect? Load Balancers assist in distributing traffic steadily between the servers and reduces  Denial-of-service (DoS) attacks 
 
 What is the advantage of a jump box?
 The jump box controls entry to other virtual machines by authorizing connections from set IP addresses and being redirected to the other machines. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __logs___ and system _files____.
--  What does Filebeat watch for?_Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
--  TODO: What does Metricbeat record?_Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system files.
+-  What does Filebeat watch for? Filebeat assists in creating and sorting log files to send off to Logstash and Elasticsearch. As well, as it records data regarding the file process, which includes when the files have been adjusted and which specific files.  
+-  What does Metricbeat record? Metricbeat is a lightweight shipper that is installed on a server to regularly gather metrics from an operating system as well as from services that are working on a host machine.  
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -49,11 +49,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _Jbox____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_ 173.33.194.163 
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Add whitelisted IP addresses: Home IP Address 173.33.194.163 
 
-Machines within the network can only be accessed by _Jbox IP 10.0.0.4____.
-- Which machine did you allow to access your ELK VM? Jbox Virtual Machine  What was its IP address?_10.0.0.4
+Machines within the network can only be accessed by Jump Box Private IP: 10.0.0.4, Public IP: 104.42.220.69.
+- Which machine did you allow to access your ELK VM? Jbox Virtual Machine What was its IP address? Private IP:10.0.0.4, Public IP: 104.42.220.69.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -76,6 +76,8 @@ The playbook implements the following tasks:
 - Install docker module 
 - Increase virtual memory and Use more memory
 - Download and launch a docker elk container with published ports: 5601, 9200, 5044
+
+![TODO : Update the install-elk.yml](/Ansible/install-elk.yml)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
