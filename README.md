@@ -77,8 +77,6 @@ The playbook implements the following tasks:
 - Increase virtual memory and Use more memory
 - Download and launch a docker elk container with published ports: 5601, 9200, 5044
 
- -[Update the install-elk.yml](Ansible/install-elk.yml)
-
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](/Images/docker_ps_output.png)
@@ -99,8 +97,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat-config.yml file to __ansible container /etc/ansible/files/filebeat-config.yml___.
-- Update the hosts file to include...the elk server 10.1.0.4 under the webservers_
+- Copy the filebeat-config.yml file to ansible container /etc/ansible/files/filebeat-config.yml.
+- Update the hosts file to include...the elk server 10.1.0.4 under the webservers
 - Run the playbook, and navigate to http://20.185.38.234:5601/app/kibana go to Step 5:Module Status and click Check Data __ to check that the installation worked as expected.
 
 Answer the following questions to fill in the blanks:
