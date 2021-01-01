@@ -77,7 +77,7 @@ The playbook implements the following tasks:
 - Increase virtual memory and Use more memory
 - Download and launch a docker elk container with published ports: 5601, 9200, 5044
 
-![TODO : Update the install-elk.yml](/Ansible/install-elk.yml)
+ -[Update the install-elk.yml](Ansible/install-elk.yml)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
