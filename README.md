@@ -53,7 +53,8 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - Home IP Address 173.33.194.163 
 
 Machines within the network can only be accessed by Jump Box.
-- Which machine did you allow to access your ELK VM? Jbox Virtual Machine What was its IP address? Private IP:10.0.0.4.
+- Which machine did you allow to access your ELK VM? Jbox Virtual Machine 
+- What was its IP address? Private IP:10.0.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -62,19 +63,20 @@ A summary of the access policies in place can be found in the table below.
 | Jbox     | Yes                 | 173.33.194.163       |
 | Web-1    | No                  | 10.0.0.4             |
 | Web-2    | No                  | 10.0.0.4             |
-| ELK      | No                  | 173.33.194.163       |
+| Load Balancer | Yes            | 173.33.194.163       |
+| ELK      | Yes                  | 10.0.0.4/173.33.194.163
+       |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible?_ it makes sure the scripts will run identically on every virtual machine and the automated configurations will do the same thing each time they are ran, reducing variability among the configuration process. 
+- What is the main advantage of automating configuration with Ansible? It makes sure the scripts will run identically on every virtual machine and the automated configurations will do the same thing each time they are ran, reducing variability among the configuration process. 
 
 The playbook implements the following tasks:
-- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Install docker.io
-- Install python3-pip
-- Install docker module 
-- Increase virtual memory and Use more memory
+- Install Docker.io
+- Install Python3-pip
+- Install Docker Module 
+- Increase Virtual Memory and Use More Memory
 - Download and launch a docker elk container with published ports: 5601, 9200, 5044
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -83,7 +85,8 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- Web-1 Private IP Address 10.0.0.5 and Web-2 Private IP Address 10.0.0.6 
+- Web-1 Private IP Address 10.0.0.5 
+- Web-2 Private IP Address 10.0.0.6 
 
 We have installed the following Beats on these machines:
 - Filebeat (filebeat-7.4.0-amd64.deb) 
