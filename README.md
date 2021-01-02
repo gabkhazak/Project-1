@@ -50,10 +50,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Add whitelisted IP addresses: Home IP Address 173.33.194.163 
+- Home IP Address 173.33.194.163 
 
-Machines within the network can only be accessed by Jump Box Private IP: 10.0.0.4, Public IP: 104.42.220.69.
-- Which machine did you allow to access your ELK VM? Jbox Virtual Machine What was its IP address? Private IP:10.0.0.4, Public IP: 104.42.220.69.
+Machines within the network can only be accessed by Jump Box.
+- Which machine did you allow to access your ELK VM? Jbox Virtual Machine What was its IP address? Private IP:10.0.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
