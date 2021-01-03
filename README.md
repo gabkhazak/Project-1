@@ -132,7 +132,8 @@ SSH into the control node and follow the steps below:
     - setup:kibana:
     - host: "10.1.0.4:5601"
 
-- Run the playbook, and navigate to kibana using the ELK-VM Public IP Address to check that the installation worked as >  - Navigate to Kibana through http://20.185.38.234:5601/app/kibana (http://[your.VM.IP]:5601/app/kibana)
+- Run the playbook, and navigate to kibana using the ELK-VM Public IP Address to check that the installation worked as expected. 
+  - Navigate to Kibana through http://20.185.38.234:5601/app/kibana (http://[your.VM.IP]:5601/app/kibana)
   - Click "Add Log Data"
   - Select "System Logs"
   - Click on the DEB tab under "Getting Started"
