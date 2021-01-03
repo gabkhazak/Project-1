@@ -122,6 +122,26 @@ SSH into the control node and follow the steps below:
 
 ![TODO: Successful Filebeat](Images/kibanafilebeat.png)
 
+- Copy the metricbeat-config.yml file to ansible container /etc/ansible/files/metricbeat-config.yml.                        - Update the filebeat-config.yml file to include...
+   - At line #1106:
+    - output.elasticsearch:
+    - hosts: ["10.1.0.4:9200"]                                                                                              - username: "elastic"
+    - password: "changeme"
+   - At line #1806:
+    - setup:kibana:
+    - host: "10.1.0.4:5601"
+
+- Run the playbook, and navigate to kibana using the ELK-VM Public IP Address to check that the installation worked as >  - Navigate to Kibana through http://20.185.38.234:5601/app/kibana (http://[your.VM.IP]:5601/app/kibana)
+  - Click "Add Log Data"
+  - Select "System Logs"
+  - Click on the DEB tab under "Getting Started"
+  - Scroll to the "Step 5: Module Status
+  - Click "Check Data" at the bottom of the page
+
+ The Following will be shown if the installation was successful
+
+![TODO: Successful Filebeat](Images/kibanametricbeat.png)
+
 Answer the following questions to fill in the blanks:
 - Which file is the playbook? filebeat-playbook.yml  Where do you copy it? /etc/ansible/roles 
 - Which file do you update to make Ansible run the playbook on a specific machine? The hosts file using the specific IP address of the Virtual Machine in /etc/ansible/hosts 
@@ -131,7 +151,7 @@ Answer the following questions to fill in the blanks:
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-- Run ansible-playbook filebeat-playbook.yml to download the playbook 
-- Run ansible-playbook metricbeat-playbook.yml to download the playbook
+- Run ansible-playbook filebeat-playbook.yml to download the fileabeat playbook 
+- Run ansible-playbook metricbeat-playbook.yml to download the metricbeat playbook
 - Run sudo apt-get update to update the files 
 
