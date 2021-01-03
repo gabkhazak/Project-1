@@ -125,7 +125,8 @@ SSH into the control node and follow the steps below:
 - Copy the metricbeat-config.yml file to ansible container /etc/ansible/files/metricbeat-config.yml.                        - Update the filebeat-config.yml file to include...
    - At line #1106:
     - output.elasticsearch:
-    - hosts: ["10.1.0.4:9200"]                                                                                              - username: "elastic"
+    - hosts: ["10.1.0.4:9200"]                                         
+    - username: "elastic"
     - password: "changeme"
    - At line #1806:
     - setup:kibana:
