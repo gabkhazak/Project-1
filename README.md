@@ -151,10 +151,13 @@ Answer the following questions to fill in the blanks:
 - Which file do you update to make Ansible run the playbook on a specific machine? 
     - The hosts file using the specific IP address of the Virtual Machine in /etc/ansible/hosts directory (as seen below two groups should be outlined [webservers] and [elk] 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?    
-   - Update the hosts file in /etc/ansible/hosts Add the private IP of the ELK virtual machine which is 10.1.0.4 in the [elk] group under the [webservers] group which will install the ELK server and the other group [webservers] which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat.                                                         
-  -**[webservers]                                                                         
+   - Update the hosts file in /etc/ansible/hosts Add the private IP of the ELK virtual machine which is 10.1.0.4 in the [elk] group under the [webservers] group which will install the ELK server and the other group [webservers] which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat.        
+ - Scroll to line #20 and update the [webservers] group to include Web-1 and Web-2 Virtual Machine's Private IP Address
+  -**[webservers]                                                                          
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3                       
-10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                                                     
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3  
+ 
+ - Scroll to line #28 and update the [elk] group to include the ELK Virtual Machine Private IP 
   -**[elk]                                                                 
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 
