@@ -92,8 +92,7 @@ We have installed the following Beats on these machines:
 - Metricbeat (metricbeat-7.4.0-amd64.deb)
 
 These Beats allow us to collect the following information from each machine:
-- In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
-- Filebeat collects log files, which will track the Apache server and MySQL database logs that are created by DVWA. The data visualization will be observed in Kibana. 
+- Filebeat collects log files, which will track the Apache server and MySQL database logs that are created by DVWA, which can be used to monitor attempted logon requests and visitors. The data visualization will be observed in Kibana. 
 - Metricbeat assists in montitoring servers and services that are hosted by gathering metrics from operating systems and several services. Metricbeat observes system-level CPU usage, and memory usage. The Data visualization monitoring and metric analyzation will then be observed through kibana. 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
