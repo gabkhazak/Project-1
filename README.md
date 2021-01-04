@@ -153,7 +153,8 @@ Answer the following questions to fill in the blanks:
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-- Run ansible-playbook filebeat-playbook.yml to download the fileabeat playbook 
+- Run ansible-playbook filebeat-playbook.yml (include the title of the playbook file) to download the fileabeat playbook 
 - Run ansible-playbook metricbeat-playbook.yml to download the metricbeat playbook
+- In order to run the playbook, you have to be in the directory that the playbook file is located, or the path where the playbook file is stored must be included when running the command
 - Run sudo apt-get update to update the files 
 
