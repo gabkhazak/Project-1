@@ -53,7 +53,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - Home IP Address 173.33.194.163 
 
 Machines within the network can only be accessed by Jump Box.
-- Which machine did you allow to access your ELK VM? Jbox Virtual Machine 
+- Which machine did you allow to access your ELK VM? Jump Box Virtual Machine 
 - What was its IP address? Private IP:10.0.0.4.
 
 A summary of the access policies in place can be found in the table below.
@@ -155,8 +155,11 @@ Answer the following questions to fill in the blanks:
 
 As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
-- Run ansible-playbook filebeat-playbook.yml (include the title of the playbook file) to download the fileabeat playbook 
-- Run ansible-playbook metricbeat-playbook.yml to download the metricbeat playbook
-- In order to run the playbook, you have to be in the directory that the playbook file is located, or the path where the playbook file is stored must be included when running the command
+- Run ansible-playbook followed by the title of the playbook file
+- To download the Filebeat Playbook the following command was used 
+    - ansible-playbook filebeat-playbook.yml 
+- To download the Metricbeat Playbook the following command was used
+    - ansible-playbook metricbeat-playbook.yml
+- Important to consider, In order to run the playbook, you have to be in the directory that the playbook file is located, or the path where the playbook file is stored must be included when running the command
 - Run sudo apt-get update to update the files 
 
