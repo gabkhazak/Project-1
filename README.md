@@ -144,7 +144,10 @@ SSH into the control node and follow the steps below:
 ![TODO: Successful Filebeat](Images/kibanametricbeat.png)
 
 Answer the following questions to fill in the blanks:
-- Which file is the playbook? filebeat-playbook.yml, metricbeat-playbook.yml , dvwa.yml, and install-elk.yml Where do you copy it? filebeat-playbook.yml and metricbeat-playbook.yml are in /etc/ansible/roles and dvwa.yml, and install-elk.yml are in /etc/ansible
+- Which file is the playbook? Where do you copy it?
+  - Playbook Files: filebeat-playbook.yml, metricbeat-playbook.yml , dvwa.yml, and install-elk.yml  
+  - filebeat-playbook.yml and metricbeat-playbook.yml are in /etc/ansible/roles directory and dvwa.yml, and install-elk.yml are in /etc/ansible directory
+  - filebeat-config.yml and metricbeat-config.yml Configuration files are copied to Web-1 and Web-2 Virtual machine's in /etc/filebeat (called         filebeat.reference.yml) and /etc/metricbeat (called metricbeat.reference.yml)
 - Which file do you update to make Ansible run the playbook on a specific machine? The hosts file using the specific IP address of the Virtual Machine in /etc/ansible/hosts 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on? Update the hosts file in /etc/ansible/hosts Add the private IP of the ELK virtual machine which is 10.1.0.4 in the [elk] group under the [webservers] group which will install the ELK server and the other group [webservers] which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat.                                       
  -[See Hosts File For More Detail](Ansible/hosts) 
