@@ -151,7 +151,7 @@ Answer the following questions to fill in the blanks:
 - Which file do you update to make Ansible run the playbook on a specific machine? 
     - The hosts file using the specific IP address of the Virtual Machine in /etc/ansible/hosts directory (as seen below two groups should be outlined [webservers] and [elk] 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?    
-   - Update the hosts file in /etc/ansible/hosts directory by adding the private IP of the ELK virtual machine which is 10.1.0.4 in the [elk] group under the [webservers] group which will install the ELK server and the other group [webservers] which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat. Line #3 of the playbook file must include which hosts the playbook should be performed on, In the format hosts: **name of group** 
+   - Update the hosts file in /etc/ansible/hosts directory by adding the [webservers] group which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat, and adding the [elk] group which includes the private IP Address of the ELK virtual Machine which is 10.1.0.4 which will install the ELK server. Line #3 of the playbook file must include which hosts the playbook should be performed on.
  
   The following edits were made in the Hosts file:
     - Line #20 was updated to include Web-1 and Web-2 Virtual Machine's Private IP Addresses under the [webservers] group (as follows)                 
