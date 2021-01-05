@@ -155,11 +155,11 @@ Answer the following questions to fill in the blanks:
  
   In the Hosts file the following edits were made:
     - Line #20 was updated to include Web-1 and Web-2 Virtual Machine's Private IP Addresses under the [webservers] group (as follows)                 
-   - **[webservers]**                                                                                                                          
+    - **[webservers]**                                                                                                                          
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3                                                        
 10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                          
    - Line #28 was updated to include the ELK Virtual Machine Private IP Address under the [elk] group (as follows)                       
-   - **[elk]**                                                                                                              
+     - **[elk]**                                                                                                              
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3                               
 
 - Which URL do you navigate to in order to check that the ELK server is running? http://20.185.38.234:5601/app/kibana (http://[your.VM.IP]:5601/app/kibana)
