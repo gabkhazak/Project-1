@@ -97,7 +97,8 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:                                          
+SSH into the control node and follow the steps below:                                                  
+
 **Filebeat**
 - Copy the filebeat-config.yml file to ansible container /etc/ansible/files/filebeat-config.yml.
 - Update the filebeat-config.yml file to include...
