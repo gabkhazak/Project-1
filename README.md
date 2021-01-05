@@ -156,7 +156,6 @@ Answer the following questions to fill in the blanks:
   - **[webservers]                                                                                                                            
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3                                                        
 10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                          
- 
      - Scroll to line #28 and update the [elk] group to include the ELK Virtual Machine Private IP                           
   - **[elk]                                                                                                              
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3                               
