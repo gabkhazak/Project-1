@@ -152,12 +152,13 @@ Answer the following questions to fill in the blanks:
     - The hosts file using the specific IP address of the Virtual Machine in /etc/ansible/hosts directory (as seen below two groups should be outlined [webservers] and [elk] 
 - How do I specify which machine to install the ELK server on versus which to install Filebeat on?    
    - Update the hosts file in /etc/ansible/hosts Add the private IP of the ELK virtual machine which is 10.1.0.4 in the [elk] group under the [webservers] group which will install the ELK server and the other group [webservers] which has the IP addresses of Web-1 10.0.0.5 and Web-2 10.0.0.6 which included the IP addresses of the Virtual Machines which will Install Filebeat and Metricbeat.   
-   In the Hosts file the following edits were made:
-    - Line #20 was updated to include Web-1 and Web-2 Virtual Machine's Private IP Addresses under the [webservers] group (as follows)                 
+ 
+ In the Hosts file the following edits were made:
+   - Line #20 was updated to include Web-1 and Web-2 Virtual Machine's Private IP Addresses under the [webservers] group (as follows)                 
   - **[webservers]**                                                                                                                          
 10.0.0.5 ansible_python_interpreter=/usr/bin/python3                                                        
 10.0.0.6 ansible_python_interpreter=/usr/bin/python3                                          
-   - Line #28 was updated to include the ELK Virtual Machine Private IP Address under the [elk] group (as follows)                       
+  - Line #28 was updated to include the ELK Virtual Machine Private IP Address under the [elk] group (as follows)                       
   - **[elk]**                                                                                                              
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3                               
 
